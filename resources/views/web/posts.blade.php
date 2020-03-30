@@ -7,6 +7,8 @@
 		<div class="col-md-8 col-md-offset-2">
 			
 			<h1>Lista de artículos</h1>
+			@foreach($us as $suario )
+			{{$us->name}}
 		</div>
 
 
