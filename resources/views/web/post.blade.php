@@ -10,9 +10,7 @@
         <div class="card" style="width:1000px"  >
             <div class="card-header">
                 Categoría
-                <a href="{{route('category', $post->category->slug)}}">
-                    {{$post->category->name}}
-                </a>
+                <a href="{{route('category', $post->category->slug)}}">{{$post->category->name}}</a>
             </div>
             <div class="card" style="padding: 20px">
                 @if($post->file)
@@ -24,7 +22,7 @@
                 <hr>
                 Etiquetas
 					@foreach($post->tags as $tag)
-                <a href="#{{route('tag', '$tag->slug')}}">
+                <a href="{{route('tag', $tag->slug)}}">
                     {{$tag->name}}
                 </a>
                 @endforeach
