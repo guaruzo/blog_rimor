@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Tag;
-use App\Http\Request\TagStoreRequest;
-use App\Http\Request\TagUpdateRequest;
+use App\Http\Requests\TagStoreRequest;
+use App\Http\Requests\TagUpdateRequest;
 
 class TagController extends Controller
 {
@@ -49,6 +49,7 @@ class TagController extends Controller
      */
     public function store(TagStoreRequest $request)
     {
+		
         $tag=Tag::create($request->all());
 
         return redirect()->route('tags.edit', $tag->id)
